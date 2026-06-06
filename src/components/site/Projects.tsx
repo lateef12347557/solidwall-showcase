@@ -1,19 +1,19 @@
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
-import p4 from "@/assets/project-4.jpg";
-import p5 from "@/assets/project-5.jpg";
-import p6 from "@/assets/project-6.jpg";
+import villa from "@/assets/proj-villa.jpg.asset.json";
+import duplex from "@/assets/proj-duplex.jpg.asset.json";
+import foundationsAerial from "@/assets/proj-foundations-aerial.jpg.asset.json";
+import foundations from "@/assets/proj-foundations.jpg.asset.json";
+import rebar from "@/assets/proj-rebar.jpg.asset.json";
+import site from "@/assets/proj-site.png.asset.json";
 
 const projects = [
-  { img: p1, title: "Hillcrest Residence", tag: "Residential", span: "lg:row-span-2" },
-  { img: p2, title: "Meridian Tower", tag: "Commercial", span: "" },
-  { img: p3, title: "Northgate Logistics", tag: "Industrial", span: "" },
-  { img: p4, title: "Cascade Family Home", tag: "Residential", span: "lg:row-span-2" },
-  { img: p5, title: "Foundation Build-Out", tag: "Infrastructure", span: "" },
-  { img: p6, title: "Skyline Apartments", tag: "Residential", span: "" },
+  { img: duplex.url, title: "Modern Duplex Residence", tag: "Residential", span: "lg:row-span-2" },
+  { img: foundationsAerial.url, title: "Estate Foundation Layout", tag: "Infrastructure", span: "" },
+  { img: villa.url, title: "Classic Bungalow Villa", tag: "Residential", span: "" },
+  { img: site.url, title: "Reinforced Concrete Works", tag: "Commercial", span: "lg:row-span-2" },
+  { img: foundations.url, title: "Multi-Unit Foundations", tag: "Infrastructure", span: "" },
+  { img: rebar.url, title: "On-Site Column Build", tag: "Structural", span: "" },
 ];
 
 export function Projects() {
