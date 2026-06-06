@@ -1,29 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { Services } from "@/components/site/Services";
+import { About } from "@/components/site/About";
+import { Projects } from "@/components/site/Projects";
+import { Team } from "@/components/site/Team";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Faq } from "@/components/site/Faq";
+import { CtaBanner } from "@/components/site/CtaBanner";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Solidwall Construction Ltd — Building Your Vision, One Brick at a Time" },
+      {
+        name: "description",
+        content:
+          "Solidwall Construction Ltd — full-service residential, commercial & industrial construction. From blueprint to build, delivered with integrity and excellence.",
+      },
+      { property: "og:title", content: "Solidwall Construction Ltd" },
+      {
+        property: "og:description",
+        content: "Building with Integrity. Delivering with Excellence.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <Services />
+      <About />
+      <Projects />
+      <Team />
+      <Testimonials />
+      <Faq />
+      <CtaBanner />
+      <Footer />
+    </main>
   );
 }
