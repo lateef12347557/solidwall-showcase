@@ -10,8 +10,10 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const WHATSAPP_PHONE = "2348162930106";
 export const QUOTE_URL = "https://wa.link/w4ybpz";
 export const CONTACT_URL = "https://wa.link/f9p6zm";
+export const BOOKING_URL = "/booking";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
