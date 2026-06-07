@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-import { Link } from "@tanstack/react-router";
 
 const links = [
   { label: "Home", href: "/#home" },
