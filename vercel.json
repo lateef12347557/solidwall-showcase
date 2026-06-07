@@ -1,0 +1,15 @@
+{
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist/client",
+  "functions": {
+    "dist/server/index.mjs": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/server/index.mjs"
+    }
+  ]
+}
