@@ -1,15 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
-import { Services } from "@/components/site/Services";
-import { About } from "@/components/site/About";
-import { Projects } from "@/components/site/Projects";
-import { Team } from "@/components/site/Team";
-import { Testimonials } from "@/components/site/Testimonials";
-import { Faq } from "@/components/site/Faq";
-import { CtaBanner } from "@/components/site/CtaBanner";
-import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+
+const Services = lazy(() => import("@/components/site/Services").then((m) => ({ default: m.Services })));
+const About = lazy(() => import("@/components/site/About").then((m) => ({ default: m.About })));
+const Projects = lazy(() => import("@/components/site/Projects").then((m) => ({ default: m.Projects })));
+const Team = lazy(() => import("@/components/site/Team").then((m) => ({ default: m.Team })));
+const Testimonials = lazy(() => import("@/components/site/Testimonials").then((m) => ({ default: m.Testimonials })));
+const Faq = lazy(() => import("@/components/site/Faq").then((m) => ({ default: m.Faq })));
+const CtaBanner = lazy(() => import("@/components/site/CtaBanner").then((m) => ({ default: m.CtaBanner })));
+const Footer = lazy(() => import("@/components/site/Footer").then((m) => ({ default: m.Footer })));
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,21 +32,24 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const Fallback = () => <div className="h-32" aria-hidden="true" />;
+
 function Index() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <Services />
-      <About />
-      <Projects />
-      <Team />
-      <Testimonials />
-      <Faq />
-      <CtaBanner />
-      <Footer />
+      <Suspense fallback={<Fallback />}>
+        <Services />
+        <About />
+        <Projects />
+        <Team />
+        <Testimonials />
+        <Faq />
+        <CtaBanner />
+        <Footer />
+      </Suspense>
       <WhatsAppFab />
-
     </main>
   );
 }
