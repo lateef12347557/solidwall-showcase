@@ -1,4 +1,7 @@
 {
   "buildCommand": "bun run build",
-  "outputDirectory": ".output/public"
+  "outputDirectory": "dist/client",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/dist/server/index.mjs" }
+  ]
 }
