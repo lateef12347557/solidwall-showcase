@@ -43,6 +43,8 @@ function Index() {
       <Faq />
       <CtaBanner />
       <Footer />
+      <WhatsAppFab />
+
     </main>
   );
 }
