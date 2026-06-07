@@ -12,6 +12,8 @@ export function Hero() {
           alt="Construction site at golden hour"
           width={1920}
           height={1080}
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--charcoal)]/95 via-[var(--charcoal)]/80 to-[var(--charcoal)]/60" />
