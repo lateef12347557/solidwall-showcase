@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { Faq } from "@/components/site/Faq";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { Footer } from "@/components/site/Footer";
+import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
+import { Link } from "@tanstack/react-router";
+
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services" },
+  { label: "Projects", href: "/#projects" },
+  { label: "About", href: "/#about" },
+  { label: "Book", href: "/booking" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const WHATSAPP_PHONE = "2348162930106";
